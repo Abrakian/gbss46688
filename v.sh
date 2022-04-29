@@ -40,10 +40,9 @@ cat>v2ray/config.json<<EOF
    "dns": {
         "servers": [
 	"address": "https+local://dns.adguard.com/dns-query",
+	"address": "https+local://1.1.1.1/dns-query",
 	"address": "https+local://adblock.doh.mullvad.net/dns-query"
-        ],
-        "disableCache": true,
-	"disableFallback": true
+        ]
     }
 }
 EOF
