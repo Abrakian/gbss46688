@@ -35,9 +35,10 @@ cat>v2ray/config.json<<EOF
 	{
 	"protocol": "freedom",
 	"settings": {
-	"domainStrategy": "UseIP"
-	}
-	}
+    "domainStrategy": "UseIP",
+    "userLevel": 0
+}
+}
 	],
    "dns": {
         "servers": [
