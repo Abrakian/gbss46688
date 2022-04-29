@@ -25,7 +25,7 @@ cat>v2ray/config.json<<EOF
 			"streamSettings": {
 				"network": "ws",
 						"allowInsecure": false,
-				"wsSettings": {
+						"wsSettings": {
 					"path": "/"
 				}
 			}
