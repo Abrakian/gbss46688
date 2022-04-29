@@ -34,12 +34,12 @@ cat>v2ray/config.json<<EOF
 	"outbounds": [
 	{
 	"protocol": "freedom",
-	"settings": {
-    "domainStrategy": "UseIP",
-    "userLevel": 0
-}
+	"settings": {}
 }
 	],
+	 "routing": {
+        "domainStrategy": "UseIP"
+    },
    "dns": {
         "servers": [
 	"address": "https+local://dns.adguard.com/dns-query",
