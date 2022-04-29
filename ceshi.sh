@@ -1,7 +1,7 @@
 #!/bin/bash
 # one key v2ray
 rm -rf v2ray cloudflared-linux-amd64 v2ray-linux-64.zip
-wget https://github.com/v2fly/v2ray-core/releases/latest/download/v2ray-linux-64.zip
+wget https://github.com/SagerNet/v2ray-core/releases/latest/download/v2ray-linux-64.zip
 wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64
 chmod +x cloudflared-linux-amd64
 unzip -d v2ray v2ray-linux-64.zip
@@ -47,7 +47,7 @@ cat>v2ray/config.json<<EOF
 EOF
 kill -9 $(ps -ef | grep v2ray | grep -v grep | awk '{print $2}')
 kill -9 $(ps -ef | grep cloudflared-linux-amd64 | grep -v grep | awk '{print $2}')
-./v2ray/v2ray &
+./v2ray/v2ray run ./v2ray/config.json &
 ./cloudflared-linux-amd64 tunnel --url http://localhost:8888 --no-autoupdate>argo.log 2>&1 &
 sleep 2
 clear
