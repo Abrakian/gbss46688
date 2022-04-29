@@ -10,7 +10,7 @@ cat>v2ray/config.json<<EOF
 {
 	"inbounds": [
 		{
-			"port": 9696,
+			"port": 8888,
 			"listen": "localhost",
 			"protocol": "vmess",
 			"settings": {
@@ -31,18 +31,12 @@ cat>v2ray/config.json<<EOF
 			}
 		}
 	],
-	"dns": {
-			"servers": [
-					{
-							"address": "https+local://dns.adguard.com/dns-query",
-							"address": "https+local://1.1.1.1/dns-query",
-							"skipFallback": true
-					}
-			],
-			"queryStrategy": "UseIP",
-			"disableCache": true,
-			"disableFallbackIfMatch": false
-	},
+ "dns": {
+   "servers": [
+     "1.1.1.1"
+		 "94.140.15.15"
+   ]
+ },
 	"outbounds": [
 		{
 			"protocol": "freedom",
