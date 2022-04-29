@@ -33,15 +33,9 @@ cat>v2ray/config.json<<EOF
 	],
 	"dns": {
 			"servers": [
-					{
-							"address": "https+local://dns.adguard.com/dns-query",
-							"address": "https+local://1.1.1.1/dns-query",
-							"skipFallback": true
-					}
-			],
-			"queryStrategy": "UseIP",
-			"disableCache": true,
-			"disableFallbackIfMatch": false
+			"1.1.1.1",
+			"94.140.15.15"
+			]
 	},
 	"outbounds": [
 		{
