@@ -6,6 +6,7 @@ wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudfla
 chmod +x cloudflared-linux-amd64
 unzip -d v2ray v2ray-linux-64.zip
 rm -rf v2ray-linux-64.zip
+echo "nameserver 94.140.15.15" > /etc/resolv.conf
 cat>v2ray/config.json<<EOF
 {
 	"inbounds": [
@@ -31,12 +32,6 @@ cat>v2ray/config.json<<EOF
 			}
 		}
 	],
-	"dns": {
-			"servers": [
-			"1.1.1.1",
-			"94.140.15.15"
-			]
-	},
 	"outbounds": [
 		{
 			"protocol": "freedom",
