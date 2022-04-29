@@ -39,7 +39,7 @@ cat>v2ray/config.json<<EOF
 							"skipFallback": true
 					}
 			],
-			"queryStrategy": "UseIPv6",
+			"queryStrategy": "UseIP",
 			"disableCache": true,
 			"disableFallbackIfMatch": false
 	},
@@ -55,10 +55,10 @@ kill -9 $(ps -ef | grep v2ray | grep -v grep | awk '{print $2}')
 kill -9 $(ps -ef | grep cloudflared-linux-amd64 | grep -v grep | awk '{print $2}')
 ./v2ray/v2ray  run ./v2ray/config.json &
 ./cloudflared-linux-amd64 tunnel --url http://localhost:8888 --no-autoupdate>argo.log 2>&1 &
-sleep 6
+sleep 3
 clear
 echo 等到cloudflare argo生成地址
-sleep 6
+sleep 3
 argo=$(cat argo.log | grep trycloudflare.com | awk 'NR==2{print}' | awk -F// '{print $2}' | awk '{print $1}')
 clear
 echo vmess链接已经生成,IP地址可替换为CF优选IP
