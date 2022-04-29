@@ -17,7 +17,7 @@ cat>v2ray/config.json<<EOF
 			"settings": {
 				"clients": [
 					{
-						"id": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+						"id": "1B8B9065-DC8A-4CCC-89C5-821CCC137442",
 						"alterId": 0
 					}
 				],
@@ -32,6 +32,12 @@ cat>v2ray/config.json<<EOF
 			}
 		}
 	],
+	"dns": {
+		"servers": [
+		"94.140.15.15",
+		"https+local://dns.adguard.com/dns-query"
+		]
+	},
 	"outbounds": [
 		{
 			"protocol": "freedom",
@@ -51,4 +57,4 @@ sleep 3
 argo=$(cat argo.log | grep trycloudflare.com | awk 'NR==2{print}' | awk -F// '{print $2}' | awk '{print $1}')
 clear
 echo vmess链接已经生成,IP地址可替换为CF优选IP
-echo 'vmess://'$(echo '{"add":"47.52.57.57","aid":"0","host":"'$argo'","id":"ffffffff-ffff-ffff-ffff-ffffffffffff","net":"ws","path":"","port":"443","ps":"argo v2ray","tls":"tls","type":"none","v":"2"}' | base64 -w 0)
+echo 'vmess://'$(echo '{"add":"47.52.57.57","aid":"0","host":"'$argo'","id":"1B8B9065-DC8A-4CCC-89C5-821CCC137442","net":"ws","path":"","port":"443","ps":"argo v2ray","tls":"tls","type":"none","v":"2"}' | base64 -w 0)
