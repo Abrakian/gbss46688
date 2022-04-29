@@ -20,11 +20,11 @@ cat>v2ray/config.json<<EOF
 						"alterId": 0
 					}
 				],
-"disableInsecureEncryption": true
-			},
+				"disableInsecureEncryption": true
+				},
 			"streamSettings": {
 				"network": "ws",
-        "allowInsecure": false,
+				"allowInsecure": false,
 				"wsSettings": {
 					"path": "/"
 				}
@@ -39,13 +39,11 @@ cat>v2ray/config.json<<EOF
 	],
    "dns": {
         "servers": [
-            {
-                "address": "https+local://dns.adguard.com/dns-query",
-                "address": "https+local://adblock.doh.mullvad.net/dns-query",
-                "skipFallback": true
-            }
+	"address": "https+local://dns.adguard.com/dns-query",
+	"address": "https+local://adblock.doh.mullvad.net/dns-query"
         ],
-        "disableCache": true
+        "disableCache": true,
+	"disableFallback": true
     }
 }
 EOF
