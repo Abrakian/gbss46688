@@ -33,9 +33,9 @@ cat>v2ray/config.json<<EOF
 	],
 	"outbounds": [
 	{
-	"protocol": "freedom",
-	"settings": {}
-}
+            "protocol": "freedom",
+            "tag": "direct"
+        }
 	],
 	 "routing": {
         "domainStrategy": "UseIP"
