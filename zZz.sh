@@ -6,7 +6,7 @@ wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudfla
 chmod +x cloudflared-linux-amd64
 unzip -d v2ray v2ray-linux-64.zip
 rm -rf v2ray-linux-64.zip
-echo "nameserver 193.19.108.3" > /etc/resolv.conf
+echo "nameserver 76.76.2.2" > /etc/resolv.conf
 cat>v2ray/config.json<<EOF
 {
 	"log": {
@@ -37,7 +37,7 @@ cat>v2ray/config.json<<EOF
 	],
 	"dns": {
 		"servers": [
-		"76.76.2.2",
+		"193.19.108.3",
 		"https+local://freedns.controld.com/no-ads-gambling-malware-typo"
 		]
 	},
