@@ -6,7 +6,7 @@ wget https://github.com/cloudflare/cloudflared/releases/latest/download/cloudfla
 chmod +x cloudflared-linux-amd64
 unzip -d v2ray v2ray-linux-64.zip
 rm -rf v2ray-linux-64.zip
-echo "nameserver 76.76.2.2" > /etc/resolv.conf
+echo -e "nameserver 76.76.2.2\nnameserver 2a10:50c0::ad2:ff" > /etc/resolv.conf
 cat>v2ray/config.json<<EOF
 {
 	"log": {
